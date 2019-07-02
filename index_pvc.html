@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jogo da velha</title>
+		 <link rel="stylesheet" type="text/css" href="http://cap.dc.ufscar.br/~760479/jogoCAP/css/jogo.css"> 
+	</head>
+	<body>
+		<h1 align = "center"> Jogador: está na sua vez! </h1>
+		<br/><br/>
+		<table id="tabuleiro" align="center">
+			<tr>
+				<td><img onclick="setPXY(0,0,0);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,0,1);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,0,2);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+			</tr>
+			<tr>
+				<td><img onclick="setPXY(0,1,0);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,1,1);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,1,2);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+			</tr>
+			<tr>
+				<td><img onclick="setPXY(0,2,0);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,2,1);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+				<td><img onclick="setPXY(0,2,2);" src="http://cap.dc.ufscar.br/~760479/jogoCAP/img/vazio.png" width="150px" height="150px" style="opacity:0.7;"></td>
+			</tr>
+		</table>
+
+		<form method="GET" id="formulario" action="http://cap.dc.ufscar.br/~760479/cgi-bin/main.cgi">
+	    		<input type="hidden" id="modo"name="modo" value="1">
+			<input type="hidden" id="p" name="p"><br>   		
+			<input type="hidden" id="x" name="x"><br>
+	   		<input type="hidden" id="y" name="y"><br>
+	    		<input type="hidden" name="jogadas" value="">
+		</form>
+	    	<script type="text/javascript">
+			function setPXY(p,x,y) { document.getElementById("p").value=p;document.getElementById("x").value=x; document.getElementById("y").value=y; document.getElementById("formulario").submit();}
+		</script>
+		</body>
+</html>
+
+

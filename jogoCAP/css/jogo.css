@@ -1,0 +1,10 @@
+table, td {
+	cursor:pointer;
+       -webkit-align-items: center;
+       align-items: center;
+       -webkit-justify-content: center;
+       justify-content: center;
+}
+body { background-image: url("../img/header.jpg"); background-repeat: no-repeat;  background-size: cover; }
+h1 { color: white; }
+div { background-color: white; opacity: 0.5; }
